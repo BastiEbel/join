@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "todo-list-cc005": {
+      "hosting": {
+        "join": [
+          "todo-list-cc005"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "todo-list-cc005"
+  }
+}
