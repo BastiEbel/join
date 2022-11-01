@@ -16,9 +16,10 @@ import { LoginComponent } from './login/login.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, RegistrationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

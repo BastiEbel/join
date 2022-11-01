@@ -1,17 +1,23 @@
 <div class="main-container">
   <img src="/assets/img/Capa1.png" />
-  <div class="header-container">
-    <div class="container-sign-up">
-      <p class="sign-text">Not a Join user?</p>
-      <a class="sign-up" href="/sign-up">Sign up</a>
-    </div>
-  </div>
-  <div class="login-container">
+  <div class="sign-up-container">
     <div class="header">
-      <div class="header-text">Log in</div>
+      <a class="back" href="/login"><mat-icon>arrow_back</mat-icon></a>
+      <div class="header-text">Sign up</div>
       <div class="vector"></div>
     </div>
     <form action="">
+      <div class="container-input">
+        <div class="edit-field">
+          <input
+            placeholder="Name"
+            formControlName="userName"
+            type="text"
+            required
+          />
+          <mat-icon>person</mat-icon>
+        </div>
+      </div>
       <div class="container-input">
         <div class="edit-field">
           <input
@@ -36,14 +42,6 @@
         </div>
       </div>
     </form>
-    <div class="container-checkbox">
-      <input class="checkbox" type="checkbox" />
-      <p>Remember me</p>
-      <a href="">Forgot my password</a>
-    </div>
-    <div class="container-btn">
-      <button class="btn-login">Log in</button>
-      <button class="btn-guest">Guest Log in</button>
-    </div>
+    <button class="btn-sign-up">Sign up</button>
   </div>
 </div>

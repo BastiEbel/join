@@ -1,0 +1,140 @@
+.main-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(246, 247, 248, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    left: 5.35%;
+    right: 87.71%;
+    top: 4.81%;
+    bottom: 80.28%;
+}
+
+.sign-up-container {
+    width: 652px;
+    height: 559px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.04);
+    gap: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    width: 315px;
+    height: 97px;
+    padding: 0;
+    gap: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.back {
+    position: absolute;
+    left: 28.67%;
+    right: 16.67%;
+    top: 21.59%;
+    bottom: 17.59%;
+
+    .mat-icon {
+        color: #29abe2;
+        transform: scale(1.75);
+        &:hover {
+            transform: scale(2.2);
+        }
+    }
+}
+.header-text {
+    width: 315px;
+    height: 73px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+    text-align: center;
+    color: black;
+}
+.vector {
+    width: 150px;
+    border: 3px solid #29abe2;
+}
+form {
+    width: 422px;
+    height: 271px;
+    top: 167px;
+    left: 115px;
+    gap: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.container-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 422px;
+    height: 71px;
+}
+input {
+    border: unset;
+    height: 45px;
+    width: 360px;
+    &:focus-visible {
+        outline: none;
+    }
+}
+.mat-icon {
+    color: #d1d1d1;
+}
+.edit-field {
+    width: 422px;
+    height: 51px;
+    gap: 10px;
+    padding-left: 21px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+}
+.btn-sign-up {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0px;
+    gap: 10px;
+    color: white;
+    width: 145px;
+    height: 51px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    background: #2a3647;
+    border-radius: 8px;
+    &:hover {
+        cursor: pointer;
+        background: #41536d;
+    }
+}
