@@ -4,40 +4,32 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //Firebase
-import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
-import {environment} from '../environments/environment';
-import {provideAuth, getAuth} from '@angular/fire/auth';
-import {provideFirestore, getFirestore} from '@angular/fire/firestore';
-import {provideStorage, getStorage} from '@angular/fire/storage';
+//import { FirebaseApp } from '@firebase/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
 //firestore
-import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
-import {AngularFireModule} from '@angular/fire/compat';
-import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
-import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import { AngularFireModule } from '@angular/fire/compat';
+import { LoginComponent } from './login/login.component';
+
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFirestoreModule,
-    AngularFireDatabaseModule,
-    AngularFireStorageModule,
+    MatIconModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage()),
-    AngularFirestoreModule.enablePersistence({synchronizeTabs: true}),
-    AngularFireModule.initializeApp(environment.firebase),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore())
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

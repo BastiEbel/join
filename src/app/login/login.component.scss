@@ -1,0 +1,184 @@
+.main-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(246, 247, 248, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    left: 5.35%;
+    right: 87.71%;
+    top: 7.81%;
+    bottom: 80.28%;
+    animation: logo-animate 1s ease-in-out;
+}
+
+.login-container {
+    animation: login-animate 1.75s ease-in-out;
+    width: 652px;
+    height: 513px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.04);
+    gap: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@keyframes login-animate {
+    0% {
+        z-index: -1;
+    }
+    100% {
+        width: 652px;
+        height: 513px;
+        border: 2px solid rgba(0, 0, 0, 0.05);
+        border-radius: 30px;
+        background-color: white;
+        gap: 35px;
+        padding: 35px, 0px, 35px, 0px;
+    }
+}
+
+@keyframes logo-animate {
+    0% {
+        transform: scale(2);
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        top: 50%;
+        bottom: 50%;
+    }
+    100% {
+        width: 100px;
+        height: 120px;
+        position: absolute;
+        left: 5.35%;
+        right: 87.71%;
+        top: 7.81%;
+        bottom: 80.28%;
+    }
+}
+
+.header {
+    width: 315px;
+    height: 97px;
+    padding: 0;
+    gap: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.header-text {
+    width: 315px;
+    height: 73px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+    text-align: center;
+    color: black;
+}
+.vector {
+    width: 150px;
+    border: 3px solid #29abe2;
+}
+form {
+    width: 422px;
+    height: 171px;
+    top: 167px;
+    left: 115px;
+    gap: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.container-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 422px;
+    height: 71px;
+}
+input {
+    border: unset;
+    height: 45px;
+    width: 360px;
+    &:focus-visible {
+        outline: none;
+    }
+}
+.mat-icon {
+    color: #d1d1d1;
+}
+.edit-field {
+    width: 422px;
+    height: 51px;
+    gap: 10px;
+    padding-left: 21px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+}
+
+.container-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 35px;
+    width: 360px;
+    height: 19px;
+    .checkbox {
+        margin: unset;
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        background: linear-gradient(180deg, #f9f9f9 0%, #f0f0f0 100%);
+        border: 1px solid #000000;
+        border-radius: 3px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    p {
+        margin: unset;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+    }
+    a {
+        color: #29abe2;
+        width: 154px;
+        height: 19px;
+        text-decoration: unset;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
