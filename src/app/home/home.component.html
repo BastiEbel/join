@@ -1,1 +1,55 @@
-<p>home works!</p>
+<mat-drawer-container class="mat-draw-container" autosize>
+  <mat-drawer #drawer class="sidenav" [opened]="true" mode="side">
+    <div class="logo-container">
+      <img class="logo" src="./assets/img/CapaWhite.png" />
+    </div>
+  </mat-drawer>
+  <mat-toolbar class="header">
+    <!-- <mat-icon class="menu-icon" mat-icon-button (click)="drawer.toggle()"
+          >menu</mat-icon
+        > -->
+    <span class="project-name">Kanban Project Management Tool</span>
+    <div>
+      <ng-container *ngIf="loginButton">
+        <button
+          class="profil-btn"
+          mat-button
+          target="_blank"
+          [matMenuTriggerFor]="userMenu"
+        >
+          <img
+            class="profile-img-toolbar"
+            width="30"
+            height="30"
+            [src]="'./assets/img/profile_Pic_gray.png'"
+          />
+          <span class="displayName"
+            ><!-- {{ user.displayName }} -->Username</span
+          >
+          <mat-icon>expand_more</mat-icon>
+        </button>
+      </ng-container>
+      <ng-template #loginButton>
+        <a mat-button target="_blank" class="header-right">
+          <mat-icon matSuffix>login</mat-icon>
+        </a>
+      </ng-template>
+    </div>
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item>
+        <mat-icon class="menu-icon" matSuffix>logout</mat-icon>
+        Logout
+      </button>
+      <button mat-menu-item>
+        <mat-icon class="menu-icon" matSuffix>account_circle</mat-icon> Profil
+      </button>
+      <button class="delete-Acc" mat-menu-item>
+        <mat-icon class="menu-icon" matSuffix>delete</mat-icon>
+        Delete Account
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+  <div class="router-container">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

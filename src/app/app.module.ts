@@ -19,8 +19,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
 
+//Material Design
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { SidebarComponent } from './home/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +33,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     LoginComponent,
     RegistrationComponent,
     HomeComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ReactiveFormsModule,
     MatIconModule,
     MatInputModule,
+    MatSidenavModule,
+    MatToolbarModule,
     MatFormFieldModule,
+    MatMenuModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
