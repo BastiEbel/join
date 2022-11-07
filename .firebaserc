@@ -6,9 +6,16 @@
           "todo-list-cc005"
         ]
       }
+    },
+    "join-8a2e7": {
+      "hosting": {
+        "join": [
+          "join-8a2e7"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "todo-list-cc005"
+    "default": "join-8a2e7"
   }
 }

@@ -20,20 +20,40 @@ img {
 }
 
 .sign-up-container {
+    animation: sign-up-animate 1s ease-in-out;
     width: 652px;
-    height: 559px;
+    height: 575px;
     border: 2px solid rgba(0, 0, 0, 0.05);
     border-radius: 30px;
     background-color: white;
     box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.04);
     gap: 35px;
-    padding-top: 35px;
+    padding-top: 24px;
     padding-bottom: 35px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-
+@keyframes sign-up-animate {
+    0% {
+        transform: translateX(150%);
+        opacity: 0;
+    }
+    100% {
+        width: 652px;
+        height: 575px;
+        border: 2px solid rgba(0, 0, 0, 0.05);
+        border-radius: 30px;
+        background-color: white;
+        box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.04);
+        gap: 35px;
+        padding-top: 24px;
+        padding-bottom: 35px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
 .header {
     width: 315px;
     height: 97px;
@@ -44,12 +64,8 @@ img {
     flex-direction: column;
 }
 .back {
-    position: absolute;
-    left: 28.67%;
-    right: 16.67%;
-    top: 21.59%;
-    bottom: 17.59%;
-
+    margin-left: 48px;
+    width: 100%;
     .mat-icon {
         color: #29abe2;
         transform: scale(1.75);
@@ -82,45 +98,25 @@ form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
 }
-.container-input {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-
-    width: 422px;
-    height: 71px;
+.btn-pw {
+    border: unset !important;
+    background-color: white !important;
+    padding: unset !important;
 }
 input {
     border: unset;
-    height: 45px;
-    width: 360px;
     &:focus-visible {
         outline: none;
     }
-}
-.mat-icon {
-    color: #d1d1d1;
-}
-.edit-field {
-    width: 422px;
-    height: 51px;
-    gap: 10px;
-    padding-left: 21px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: #ffffff;
-    border: 1px solid #d1d1d1;
-    border-radius: 10px;
 }
 .btn-sign-up {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 16px;
     padding: 4px 0px;
     gap: 10px;
     color: white;

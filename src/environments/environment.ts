@@ -4,12 +4,13 @@
 
 export const environment = {
   firebase: {
-    projectId: 'todo-list-cc005',
-    appId: '1:59332574058:web:c4aed4d203dc37d0e8c313',
-    storageBucket: 'todo-list-cc005.appspot.com',
-    apiKey: 'AIzaSyAyGDHKVSYSF8xZ3mWYBHFfA9h9n-RrwcM',
-    authDomain: 'todo-list-cc005.firebaseapp.com',
-    messagingSenderId: '59332574058',
+    projectId: 'join-8a2e7',
+    appId: '1:580082551686:web:4bacd18db44d05d326ba07',
+    storageBucket: 'join-8a2e7.appspot.com',
+    locationId: 'europe-west',
+    apiKey: 'AIzaSyBGVHun3YS6UUU9sqvKxwAcPNdNEnw9NjE',
+    authDomain: 'join-8a2e7.firebaseapp.com',
+    messagingSenderId: '580082551686',
   },
   production: false
 };
