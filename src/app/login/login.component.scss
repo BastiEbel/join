@@ -243,7 +243,8 @@ form {
     border-radius: 8px;
     &:hover {
         cursor: pointer;
-        background: #41536d;
+        background: #29abe2;
+        border-color: #29abe2;
     }
 }
 .btn-guest {
@@ -267,6 +268,7 @@ form {
     color: #2a3647;
     &:hover {
         cursor: pointer;
-        background-color: #2a364718;
+        border-color: #29abe2;
+        box-shadow: 0px 4px 8px 0px #29abe2;
     }
 }
