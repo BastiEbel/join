@@ -10,9 +10,9 @@ import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
   { path: 'home', component: SummaryComponent },
-  { path: 'home/board', component: BoardComponent },
-  { path: 'home/task', component: TaskComponent },
-  { path: 'home/contacts', component: ContactsComponent },
+  { path: 'board', component: BoardComponent },
+  { path: 'task', component: TaskComponent },
+  { path: 'contacts', component: ContactsComponent },
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: RegistrationComponent },

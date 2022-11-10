@@ -3,19 +3,16 @@
     <img class="logo" src="./assets/img/CapaWhite.png" />
   </div>
   <div class="container-menu">
-    <a (click)="homeLink()" routerLink="/home" [class.isSelected]="summary"
+    <a routerLink="/home" routerLinkActive="isSelected"
       ><img src="./assets/img/summary.png" />Summary</a
     >
-    <a (click)="boardLink()" routerLink="/home/board" [class.isSelected]="board"
+    <a routerLink="/board" routerLinkActive="isSelected"
       ><img src="./assets/img/board.png" />Board</a
     >
-    <a (click)="taskLink()" routerLink="/home/task" [class.isSelected]="task"
+    <a routerLink="/task" routerLinkActive="isSelected"
       ><img src="./assets/img/Task.png" />Add Task</a
     >
-    <a
-      (click)="contactLink()"
-      routerLink="/home/contacts"
-      [class.isSelected]="contacts"
+    <a routerLink="/contacts" routerLinkActive="isSelected"
       ><img src="./assets/img/Contacts.png" />Contacts</a
     >
   </div>

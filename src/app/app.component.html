@@ -1,1 +1,11 @@
-<app-home></app-home>
+<!-- <router-outlet></router-outlet> -->
+<app-home
+  *ngIf="
+    router.url == '/home' ||
+    router.url == '/board' ||
+    router.url == '/task' ||
+    router.url == '/contacts'
+  "
+></app-home>
+<app-login *ngIf="router.url == '/' || router.url == '/login'"></app-login>
+<app-registration *ngIf="router.url == '/sign-up'"></app-registration>
