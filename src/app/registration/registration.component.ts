@@ -8,6 +8,7 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
+import { AuthService } from '../service/auth.service';
 
 export function passwordsMatchValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -38,7 +39,7 @@ export class RegistrationComponent implements OnInit {
     },
     { validators: passwordsMatchValidator() }
   );
-  constructor() {}
+  constructor(public authService: AuthService) {}
 
   get email() {
     return this.signUpForm.get('email');

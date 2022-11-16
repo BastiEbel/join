@@ -1,4 +1,7 @@
 <div class="main-container">
+  <div class="d-none" [class.spinner]="authService.loading">
+    <mat-spinner></mat-spinner>
+  </div>
   <img src="/assets/img/Capa1.png" />
   <div class="sign-up-container">
     <a class="back" href="/login"><mat-icon>arrow_back</mat-icon></a>

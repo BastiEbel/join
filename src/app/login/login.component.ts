@@ -11,6 +11,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { switchMap } from 'rxjs';
+import { HotToastService } from '@ngneat/hot-toast';
 import { AuthService } from '../service/auth.service';
 
 export function passwordsMatchValidator(): ValidatorFn {
@@ -37,6 +38,15 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', Validators.required),
   });
 
+  constructor(
+    public formBuilder: FormBuilder,
+    public authService: AuthService,
+    private toast: HotToastService,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {}
+
   get email() {
     return this.loginForm.get('email');
   }
@@ -44,14 +54,32 @@ export class LoginComponent implements OnInit {
   get password() {
     return this.loginForm.get('password');
   }
-  constructor(
-    public formBuilder: FormBuilder,
-    private authService: AuthService
-  ) {}
 
-  ngOnInit(): void {}
+  logIn() {
+    this.authService.loading = true;
+    if (!this.loginForm.valid) {
+      this.authService.loading = false;
+      return;
+    }
+    this.userLogin();
+  }
 
-  signUP() {
-    this.authService.openReg = true;
+  async userLogin() {
+    const { email, password } = this.loginForm.value;
+
+    await this.authService
+      .loginUser(email, password)
+      .pipe(
+        this.toast.observe({
+          success: 'Logged in successfully',
+          loading: 'logging in...',
+          error: 'There was an error',
+        })
+      )
+      .subscribe((res) => {
+        this.router.navigate([`/home/${res.user.uid}`]);
+        this.authService.login = true;
+      });
+    this.authService.login = false;
   }
 }

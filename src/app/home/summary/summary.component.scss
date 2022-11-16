@@ -1,0 +1,77 @@
+.container-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    height: 73px;
+    margin-left: 200px;
+    margin-top: 80px;
+}
+h1 {
+    width: 315px;
+    height: 73px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+    color: #000000;
+}
+.chancer {
+    width: 0px;
+    height: 59px;
+    border: 3px solid #29abe2;
+}
+.header {
+    width: 304px;
+    height: 32px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 120%;
+    color: #2a3647;
+    margin-left: 32px;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100vh - 260px);
+}
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid black;
+    width: 580px;
+    height: 540px;
+}
+.greeding-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 385px;
+    height: 136px;
+}
+.day-time {
+    width: 338px;
+    height: 56px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 120%;
+    color: #2a3647;
+}
+.user-name {
+    width: 385px;
+    height: 77px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    color: #29abe2;
+}

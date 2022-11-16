@@ -30,6 +30,7 @@ import { SummaryComponent } from './home/summary/summary.component';
 import { BoardComponent } from './home/board/board.component';
 import { TaskComponent } from './home/task/task.component';
 import { ContactsComponent } from './home/contacts/contacts.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { ContactsComponent } from './home/contacts/contacts.component';
     MatToolbarModule,
     MatFormFieldModule,
     MatMenuModule,
+    MatProgressSpinnerModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),

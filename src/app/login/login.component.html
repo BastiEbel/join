@@ -1,9 +1,12 @@
 <div class="main-container">
+  <div class="d-none" [class.spinner]="authService.loading">
+    <mat-spinner></mat-spinner>
+  </div>
   <img src="/assets/img/Capa1.png" />
   <div class="header-container">
     <div class="container-sign-up">
       <p class="sign-text">Not a Join user?</p>
-      <a (click)="signUP()" class="sign-up" href="/sign-up">Sign up</a>
+      <a class="sign-up" href="/sign-up">Sign up</a>
     </div>
   </div>
   <div class="login-container">
@@ -57,7 +60,7 @@
       <a href="">Forgot my password</a>
     </div>
     <div class="container-btn">
-      <button class="btn-login">Log in</button>
+      <button class="btn-login" (click)="logIn()">Log in</button>
       <button class="btn-guest">Guest Log in</button>
     </div>
   </div>
