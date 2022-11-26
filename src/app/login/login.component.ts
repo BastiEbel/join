@@ -10,7 +10,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { switchMap } from 'rxjs';
 import { HotToastService } from '@ngneat/hot-toast';
 import { AuthService } from '../service/auth.service';
 
@@ -33,7 +32,7 @@ export function passwordsMatchValidator(): ValidatorFn {
 export class LoginComponent implements OnInit {
   hide: boolean = true;
 
-  loginForm = this.formBuilder.group({
+  loginForm = new FormGroup({
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
   });
@@ -63,7 +62,10 @@ export class LoginComponent implements OnInit {
     }
     this.userLogin();
   }
-
+  /**
+   *
+   * Login Function
+   */
   async userLogin() {
     const { email, password } = this.loginForm.value;
 
@@ -77,9 +79,15 @@ export class LoginComponent implements OnInit {
         })
       )
       .subscribe((res) => {
-        this.router.navigate([`/home/${res.user.uid}`]);
-        this.authService.login = true;
+        this.router.navigate([`/home/${res.user.uid}/summary`]);
       });
-    this.authService.login = false;
+    this.router.navigate(['/login']);
+  }
+
+  guestLogin() {
+    const email = 'guest@example.de';
+    const password = '12345678';
+    this.loginForm.setValue({ email, password });
+    return this.logIn();
   }
 }

@@ -9,13 +9,13 @@
       <div class="header-text">Sign up</div>
       <div class="vector"></div>
     </div>
-    <form [formGroup]="signUpForm">
+    <form [formGroup]="signUpForm" (ngSubmit)="regUser()">
       <mat-form-field class="full-width" appearance="outline">
         <mat-label>Username</mat-label>
         <input
           type="text"
           matInput
-          formControlName="name"
+          formControlName="username"
           placeholder="Username"
         />
         <mat-icon class="mr-8" matSuffix>mode_edit</mat-icon>
@@ -92,6 +92,6 @@
         </mat-error>
       </mat-form-field>
     </form>
-    <button class="btn-sign-up">Sign up</button>
+    <button (click)="regUser()" class="btn-sign-up">Sign up</button>
   </div>
 </div>

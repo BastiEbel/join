@@ -1,10 +1,10 @@
 <!-- <router-outlet></router-outlet> -->
 <app-home
   *ngIf="
-    router.url == '/home' ||
-    router.url == '/board' ||
-    router.url == '/task' ||
-    router.url == '/contacts'
+    router.url == '/home/summary' ||
+    router.url == '/home/board' ||
+    router.url == '/home/task' ||
+    router.url == '/home/contacts'
   "
 ></app-home>
 <app-login *ngIf="router.url == '/' || router.url == '/login'"></app-login>

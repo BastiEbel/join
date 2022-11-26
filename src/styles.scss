@@ -26,6 +26,12 @@ body {
 .d-none {
     display: none;
 }
+.app-visible {
+    visibility: hidden;
+}
+.d-show {
+    visibility: visible;
+}
 .mat-spinner circle {
     stroke: #2a3647 !important;
 }
